@@ -2,10 +2,7 @@
 
 function getGreeting(req, res) {
     const { name } = req.params;
-    return res.status(200).send({
-        msg: `Hello ${name}`,
-        code: 400,
-    });
+    return res.status(200).send(`Hello ${name}`);
 }
 
 module.exports = { getGreeting };

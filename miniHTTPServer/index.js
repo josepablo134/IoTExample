@@ -32,7 +32,10 @@ app.use(cors({
 	}));
 
 app.use( middleWares.errorJSON );
-app.use( middleWares.apiKey );
+
+app.get( "/", (req,res) => { res.status(200).send("Hello world!"); } )
+
+//app.use( middleWares.apiKey );
 
 app.use( sections );
 
